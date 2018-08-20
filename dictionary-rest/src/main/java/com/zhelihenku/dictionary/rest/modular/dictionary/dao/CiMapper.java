@@ -1,7 +1,11 @@
 package com.zhelihenku.dictionary.rest.modular.dictionary.dao;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.zhelihenku.dictionary.rest.modular.dictionary.model.Ci;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -13,4 +17,5 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface CiMapper extends BaseMapper<Ci> {
 
+    List<Ci> selectCiPageList(Page page);
 }

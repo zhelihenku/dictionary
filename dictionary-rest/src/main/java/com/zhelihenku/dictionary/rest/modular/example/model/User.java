@@ -1,4 +1,4 @@
-package com.zhelihenku.dictionary.rest.common.persistence.model;
+package com.zhelihenku.dictionary.rest.modular.example.model;
 
 import com.baomidou.mybatisplus.activerecord.Model;
 

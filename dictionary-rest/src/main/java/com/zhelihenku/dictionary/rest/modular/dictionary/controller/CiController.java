@@ -1,15 +1,12 @@
 package com.zhelihenku.dictionary.rest.modular.dictionary.controller;
 
 import com.zhelihenku.dictionary.core.base.controller.BaseController;
+import com.zhelihenku.dictionary.rest.modular.dictionary.dto.PageListParams;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestParam;
 import com.zhelihenku.dictionary.rest.modular.dictionary.model.Ci;
 import com.zhelihenku.dictionary.rest.modular.dictionary.service.ICiService;
 
@@ -19,14 +16,27 @@ import com.zhelihenku.dictionary.rest.modular.dictionary.service.ICiService;
  * @author PhilWang
  * @Date 2018-08-20 20:11:17
  */
-@Controller
+@RestController
 @RequestMapping("/ci")
 public class CiController extends BaseController {
+
+    private static final Logger logger = LoggerFactory.getLogger(CiController.class);
 
     private String PREFIX = "/dictionary/ci/";
 
     @Autowired
     private ICiService ciService;
+
+
+    // -------- adminManage --------
+
+    /**
+     * 获取词语列表
+     */
+    @RequestMapping(value = "/getPageList", method = RequestMethod.POST)
+    public Object getCiPageList(@RequestBody PageListParams params) {
+        return ciService.getCiPageList(params);
+    }
 
     /**
      * 跳转到词语首页

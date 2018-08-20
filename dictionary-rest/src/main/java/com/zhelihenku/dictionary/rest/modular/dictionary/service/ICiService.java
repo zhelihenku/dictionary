@@ -1,5 +1,6 @@
 package com.zhelihenku.dictionary.rest.modular.dictionary.service;
 
+import com.zhelihenku.dictionary.rest.modular.dictionary.dto.PageListParams;
 import com.zhelihenku.dictionary.rest.modular.dictionary.model.Ci;
 import com.baomidou.mybatisplus.service.IService;
 
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface ICiService extends IService<Ci> {
 
+    Object getCiPageList(PageListParams params);
 }

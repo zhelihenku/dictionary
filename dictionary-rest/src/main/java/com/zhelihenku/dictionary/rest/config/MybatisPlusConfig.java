@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date 2017年8月23日12:51:41
  */
 @Configuration
-@MapperScan(basePackages = {"com.zhelihenku.dictionary.rest.*.dao", "com.zhelihenku.dictionary.rest.common.persistence.dao"})
+@MapperScan(basePackages = {"com.zhelihenku.dictionary.rest.modular.*.dao"})
 public class MybatisPlusConfig {
 
     /**

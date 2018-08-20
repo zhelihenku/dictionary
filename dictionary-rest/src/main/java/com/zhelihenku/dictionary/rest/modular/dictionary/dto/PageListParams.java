@@ -1,12 +1,12 @@
 package com.zhelihenku.dictionary.rest.modular.dictionary.dto;
 
 /**
- * LoadPageListParams
+ * PageListParams
  *
  * @Auther: PhilWang
  * @Date: 2018/8/20 20:22
  */
-public class LoadPageListParams {
+public class PageListParams {
 
     /**
      * 页码
@@ -35,7 +35,7 @@ public class LoadPageListParams {
 
     @Override
     public String toString() {
-        return "LoadPageListParams{" +
+        return "PageListParams{" +
                 "index='" + index + '\'' +
                 ", pageSize='" + pageSize + '\'' +
                 '}';
