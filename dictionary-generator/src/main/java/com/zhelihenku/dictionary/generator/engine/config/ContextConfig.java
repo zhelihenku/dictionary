@@ -39,8 +39,8 @@ public class ContextConfig {
         if (entityName == null) {
             entityName = bizEnBigName;
         }
-        modelPackageName = proPackage + "." + "modular.system.model";
-        modelMapperPackageName = proPackage + "." + "modular.system.dao";
+        modelPackageName = proPackage + "." + "modular." + this.getModuleName() + ".model";
+        modelMapperPackageName = proPackage + "." + "modular." + this.getModuleName() + ".dao";
     }
 
     public String getBizEnBigName() {
