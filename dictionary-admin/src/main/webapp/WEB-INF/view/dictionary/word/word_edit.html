@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="ID" value="${item.id}" underline="true"/>
+                            <#input id="word" name="词" value="${item.word}" underline="true"/>
+                            <#input id="oldword" name="旧词" value="${item.oldword}" underline="true"/>
+                            <#input id="pinyin" name="拼音" value="${item.pinyin}" underline="true"/>
+                            <#input id="strokes" name="笔画" value="${item.strokes}" underline="true"/>
+                            <#input id="radicals" name="偏旁" value="${item.radicals}" underline="true"/>
+                            <#input id="explanation" name="解释" value="${item.explanation}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="more" name="更多" value="${item.more}" underline="true"/>
+                            <#input id="desc" name="描述" value="${item.desc}" underline="true"/>
+                            <#input id="status" name="状态（0：下架，1：上架）" value="${item.status}" underline="true"/>
+                            <#input id="isDelete" name="删除标识（0：未删除，1：已删除）" value="${item.isDelete}" underline="true"/>
+                            <#input id="createTime" name="创建时间" value="${item.createTime}" underline="true"/>
+                            <#input id="updateTime" name="更新时间" value="${item.updateTime}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="WordInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="WordInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/dictionary/word/word_info.js"></script>
+@}
